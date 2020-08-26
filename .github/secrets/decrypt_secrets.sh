@@ -4,9 +4,9 @@ set -eo pipefail
 gpg --quiet --batch --yes --decrypt  --passphrase="$IOS_KEYS"  --output .github/secrets/Universal_Links.mobileprovision .github/secrets/Universal_Links.mobileprovision.gpg
 gpg --quiet --batch --yes --decrypt --passphrase="$IOS_KEYS"  --output .github/secrets/HK.QA.p12  .github/secrets/HK.QA.p12.gpg
 
-mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+mkdir -p ~/Library/MobileDevice/Provisioning Profiles
 
-cp .github/secrets/Universal_Links.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/Universal_Links.mobileprovision
+cp .github/secrets/Universal_Links.mobileprovision ~/Library/MobileDevice/Provisioning Profiles/Universal_Links.mobileprovision
 
 
 # security create-keychain -p "" build.keychain
