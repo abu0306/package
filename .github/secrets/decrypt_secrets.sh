@@ -10,7 +10,7 @@ cp .github/secrets/Universal_Links.mobileprovision ~/Library/MobileDevice/Provis
 
 
 security create-keychain -p "" build.keychain
-security import .github/secrets/HK.QA.p12 -t agg -k ~/Library/Keychains/build.keychain -P "" -A
+security import .github/secrets/HK.QA.p12 -t agg -k ~/Library/Keychains/build.keychain -P "1234567890" -A
 
 security list-keychains -s ~/Library/Keychains/build.keychain
 security default-keychain -s ~/Library/Keychains/build.keychain
