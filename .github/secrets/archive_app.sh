@@ -6,7 +6,7 @@ set -eo pipefail
 xcodebuild -workspace package.xcworkspace \
             -scheme package
             -sdk iphoneos \
-            -configuration AppStoreDistribution \
+            -configuration Release \
             -archivePath $PWD/build/package.xcarchive \
             clean archive | xcpretty
 
