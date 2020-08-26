@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -eo pipefail
+
+xcodebuild -workspace package.xcworkspace \
+		   -scheme package \
+		   -archivePath $PWD/build/package.xcarchive \
+		   -configuration Release \
+		   clean archive | xcpretty
+
+
