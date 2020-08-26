@@ -9,7 +9,9 @@ mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 cp .github/secrets/Universal_Links.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/Universal_Links.mobileprovision
 
 
-security create-keychain -p "" build.keychain
+# security create-keychain -p "" build.keychain
+security create-keychain -p "" ~/Library/Keychains/build.keychain
+
 security import .github/secrets/HK.QA.p12 -t agg -k ~/Library/Keychains/build.keychain -P "1234567890" -A
 
 security list-keychains -s ~/Library/Keychains/build.keychain
