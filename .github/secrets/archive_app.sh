@@ -2,10 +2,18 @@
 
 set -eo pipefail
 
+
 xcodebuild -workspace package.xcworkspace \
-		   -scheme package \
-		   -archivePath $PWD/build/package.xcarchive \
-		   -configuration Release \
-		   clean archive | xcpretty
+            -scheme package
+            -sdk iphoneos \
+            -configuration AppStoreDistribution \
+            -archivePath $PWD/build/package.xcarchive \
+            clean archive | xcpretty
+
+# xcodebuild -workspace package.xcworkspace \
+# 		   -scheme package \
+# 		   -archivePath $PWD/build/package.xcarchive \
+# 		   -configuration Release \
+# 		   clean archive | xcpretty
 
 
