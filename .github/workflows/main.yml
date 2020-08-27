@@ -28,6 +28,7 @@ jobs:
         with:
           project-path: package.xcodeproj
           p12-base64: ${{ secrets.CERTIFICATES_P12 }}
+          p12-key-base64: ${{ secrets.IOS_KEYS }}
           mobileprovision-base64: ${{ secrets.MOBILEPROVISON }}
           code-signing-identity: iOS Developer
           team-id: SY2N3S55A6
