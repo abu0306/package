@@ -7,5 +7,5 @@ set -eo pipefail
 
 # xcodebuild -workspace package.xcworkspace -scheme package -archivePath $PWD/build/package.xcarchive -configuration Debug 
 
-xcodebuild clean -workspace package.xcworkspace -scheme package -archivePath build/package.xcarchive archive -configuration Debug  # Release #Debug
+xcrun xcodebuild clean -workspace package.xcworkspace -scheme package -archivePath build/package.xcarchive archive -configuration Debug  # Release #Debug
 
